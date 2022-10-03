@@ -19,6 +19,7 @@ itemMushroomstEl.textContent = `Mushrooms`;
 itemMushroomstEl.classList.add(`item`);
 console.log(itemMushroomstEl);
 
+
 const itemGarlicEl = document.createElement(`li`);
 itemGarlicEl.textContent = `Garlic`;
 itemGarlicEl.classList.add(`item`);
