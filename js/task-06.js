@@ -1,11 +1,11 @@
 // const textInputEl = document.querySelector('#validation-input');
-// const lengthInputEl = document.querySelector('[data-length="6"]');
+const lengthInputEl = document.querySelector('[data-length="6"]');
 // console.log(lengthInputEl.dataset.length);
 const inputEl = document.querySelector('input');
 
 
 inputEl.addEventListener('blur', (event) => {
-    if(event.currentTarget.value.length === 6){
+    if(event.currentTarget.value.length == lengthInputEl.dataset.length){
         inputEl.classList.add("valid");
         inputEl.classList.remove('invalid');
     } else{
@@ -20,7 +20,7 @@ inputEl.addEventListener('blur', (event) => {
 
 
 
-
+// https:monosnap.com/file/UmwRejaiTE5FuPtqQb2uo2ItSALTv5 не вказуйте число явно - звертайтесь до значення дата-атрибуту через скрипт.
 
 
 
@@ -65,4 +65,3 @@ inputEl.addEventListener('blur', (event) => {
 
 
 
-// addEventListener("focusout", event => {});

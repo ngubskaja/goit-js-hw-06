@@ -15,48 +15,31 @@ const images = [
 const listEl = document.querySelector('.gallery');
 console.log(listEl);
 
-const itemEl = [];
-images.forEach(function(images){
-  itemEl.push(`<li class = item ><img class = img src = ${images.url} alt = ${images.alt}></img></li>`);
+
+const imageListEl = images.map((images) => `<li class = item ><img class = img src = ${images.url} alt = ${images.alt}></img></li>`);
+// console.log(imageListEl);
+const component = imageListEl.join(" ");
+// console.log(component );
+
+listEl.insertAdjacentHTML('afterbegin', component);
+
+
+
+
+
+// const itemEl = [];
+// images.forEach(function(images){
+//   itemEl.push(`<li class = item ><img class = img src = ${images.url} alt = '${images.alt}'></img></li>`);
  
-});
+// });
  
-const component = itemEl.join(" ");
-console.log(component);
+// const component = itemEl.join(" ");
+// console.log(component);
 
-listEl.insertAdjacentHTML("afterbegin", component);
-
-
-
-// listEl.insertAdjacentHTML("afterbegin", "<li></li><li></li><li></li>");
-
-// const items = [ `<li><img src = ${images.url} alt = ${images.alt}></img></li>`, 
-// `<li><img src = ${images.url} alt = ${images.alt}></img></li>`,
-// `<li><img src = ${images.url} alt = ${images.alt}></img></li>`];
-// for (const item of items) {
-//   console.log(items);
-// }
-
-// listEl.append(items);
-// const items = [
-//   `<li><img src = ${images.url} alt = ${images.alt}></img></li>`,
-//   `<li><img src = ${images.url} alt = ${images.alt}></img></li>`,
-//   `<li><img src = ${images.url} alt = ${images.alt}></img></li>`
-// ];
-
-// const itemEl = document.querySelector('li');
-// console.log(itemEl);
+// listEl.insertAdjacentHTML("afterbegin", component);
 
 
-// const firstImgEl = document.createElement(`img`);
-// firstImgEl.scr = "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260";
-// firstImgEl.alt = `White and Black Long Fur Cat`;
+ // Завдання 3 доцільніше виконати з використанням методу меп - він самостійно повертає новий масив 
+// (немає потреби створювати масив власноруч і пушити в нього). 
 
-// const itemEl = createElement(`li`);
-// itemEl.innerHTML = `<img src= ${`images.url`} alt = ${`images.alt`}>`;
-
-// const firstItemEl = document.createElement(`li`);
-// console.log(firstItemEl);
-
-// listEl.insertAdjacentHTML("beforeend", "<img src = ${images.url} alt = ${images.alt}> </img> " );
 
