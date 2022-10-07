@@ -16,7 +16,7 @@ const listEl = document.querySelector('.gallery');
 console.log(listEl);
 
 
-const imageListEl = images.map((images) => `<li class = item ><img class = img src = ${images.url} alt = ${images.alt}></img></li>`);
+const imageListEl = images.map((images) => `<li class = item ><img class = img src = ${images.url} alt = '${images.alt}'></img></li>`);
 // console.log(imageListEl);
 const component = imageListEl.join(" ");
 // console.log(component );

@@ -25,7 +25,7 @@ const {
   if (email.value === "" || password.value === "") {
     alert("Все поля должны быть заполнены");
   }else{
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+    console.log({ "email": email.value, "password": password.value });
     event.currentTarget.reset();
   };
 
